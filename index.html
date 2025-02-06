@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentMatch 1E</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    
+    <!-- Íconos de Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<body>
+
+    <!-- Contenedor Principal -->
+    <div id="app">
+        <!-- Feed -->
+        <section id="feed" class="tab active">
+            <h2>Feed</h2>
+            <h3>El mejor de 1°E Ciclo: 2024-2027</h3>
+            <div id="posts"></div>
+        </section>
+
+        <!-- Novedades -->
+        <section id="novedades" class="tab">
+            <h2>Novedades</h2>
+            <p>Registro de votos anónimos</p>
+            <p>Actualización semanal</p>
+            <div id="chat"></div>
+        </section>
+
+        <!-- Crear Publicación -->
+        <section id="crear" class="tab">
+            <h2>Crear nueva publicación</h2>
+            <button id="cancelar">Cancelar</button>
+            <textarea id="postTexto" placeholder="Escribe algo..."></textarea>
+            <input type="file" id="imagen" accept="image/*">
+            <button id="publicar">Publicar</button>
+        </section>
+
+        <!-- Primeros Lugares -->
+        <section id="primeros" class="tab">
+            <h2>Primeros Lugares</h2>
+            <div id="ranking"></div>
+        </section>
+
+        <!-- Publicaciones -->
+        <section id="publicaciones" class="tab">
+            <h2>Publicaciones</h2>
+            <div id="publicacionesList"></div>
+        </section>
+    </div>
+
+    <!-- Barra de Navegación -->
+    <nav>
+        <button onclick="mostrarTab('feed')"><span class="material-symbols-outlined">favorite</span></button>
+        <button onclick="mostrarTab('novedades')"><span class="material-symbols-outlined">patient_list</span></button>
+        <button onclick="mostrarTab('crear')"><span class="material-symbols-outlined">new_window</span></button>
+        <button onclick="mostrarTab('primeros')"><span class="material-symbols-outlined">star_rate</span></button>
+        <button onclick="mostrarTab('publicaciones')"><span class="material-symbols-outlined">empty_dashboard</span></button>
+    </nav>
+
+</body>
+</html>
